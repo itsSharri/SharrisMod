@@ -1,4 +1,0 @@
-SharrisMod = {}
-SharrisMod.INIT = {
-    Jokers = {}
-}
