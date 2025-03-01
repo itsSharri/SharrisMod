@@ -250,7 +250,7 @@ SMODS.Joker{ --Kleptomaniac
     config = {
         extra = {
             chips = 0,
-            chip_gain = 5,
+            chip_gain = 10,
             steal = -30
         }
     },
