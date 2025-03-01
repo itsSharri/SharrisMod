@@ -1,0 +1,4 @@
+SharrisMod = {}
+SharrisMod.INIT = {
+    Jokers = {}
+}
