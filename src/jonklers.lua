@@ -66,7 +66,7 @@ SMODS.Joker{ -- Pink Joker
     end
 }
 
-G.P_CENTERS.j_sha_testjoker = SMODS.Joker{ --Quick Buck
+SMODS.Joker{ --Quick Buck
     name = "Quick Buck",
     key = "j_sha_quickbuck",
     config = {
@@ -1106,8 +1106,8 @@ SMODS.Joker{ --Bullseye
         end
 	end
 }]]
-
-SMODS.Back{
+--G.P_CENTERS.j_sha_testjoker = 
+--[[SMODS.Back{
     name = "Testing Deck",
     key = "testing",
     pos = {x = 1, y = 3},
@@ -1143,4 +1143,4 @@ SMODS.Back{
             end
         }))
     end
-}
+}]]
