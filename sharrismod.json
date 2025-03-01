@@ -1,0 +1,16 @@
+{
+	"id": "sharrismod",
+	"name": "SharrisMod",
+	"display_name": "Sharri's Mod",
+	"author": ["itsSharri"],
+	"description": "Some custom jokers of my own creation, since I've loved this game since I got it and for some reason decided that making art and code entirely on my own was a good idea. Enjoy!",
+	"prefix": "SharrisMod",
+	"main_file": "src/jonklers.lua",
+	"priority": 1,
+	"badge_colour": "5A1099",
+	"badge_text_colour": "409050",
+	"version": "1.0.0",
+	"dependencies": [
+		"Steamodded (>=1.0.0~ALPHA-1206c)"
+	]
+}
