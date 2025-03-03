@@ -10,31 +10,16 @@ priority = 0
 
 
 
-# Calculate when Wheel fails (for Three-Leaf Clover) (stolen from Cryptid)
+# Calculate when Wheel succeeds (for Three-Leaf Clover) (stolen from Cryptid)
 [[patches]]
 [patches.pattern]
 target = "card.lua"
 pattern = '''
-G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.4, func = function()
-    attention_text({
-        text = localize('k_nope_ex'),
-        scale = 1.3, 
-        hold = 1.4,
-        major = used_tarot,
-        backdrop_colour = G.C.SECONDARY_SET.Tarot,
-        align = (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK) and 'tm' or 'cm',
-        offset = {x = 0, y = (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK) and -0.2 or 0},
-        silent = true
-        })
-        G.E_MANAGER:add_event(Event({trigger = 'after', delay = 0.06*G.SETTINGS.GAMESPEED, blockable = false, blocking = false, func = function()
-            play_sound('tarot2', 0.76, 0.4);return true end}))
-        play_sound('tarot2', 1, 0.4)
-        used_tarot:juice_up(0.3, 0.5)
-return true end }))
+if self.ability.name == 'Ectoplasm' or self.ability.name == 'Hex' or pseudorandom('wheel_of_fortune') < G.GAME.probabilities.normal/self.ability.extra then
 '''
 position = "after"
 payload = '''
-self.sha_wheel_nope = true
+if self.ability.name == 'The Wheel of Fortune' then self.sha_wheel_yup = true end
 '''
 match_indent = false
 
