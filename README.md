@@ -5,6 +5,6 @@ All ideas, art, and code done by me, itsSharri!
 
 Requires Steamodded and Lovely.
 
-Make sure to let me know if there are any issues, especially as I ran this all on older versions of stuff as I was coding it.
+If you run into issues or have any other feedback, there's a place in the Balatro Discord for discussing this mod! [Contact me here!](https://discord.com/channels/1116389027176787968/1345255389993635880)
 
 I have lots more ideas, so more Jokers to come!
