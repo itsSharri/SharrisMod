@@ -337,22 +337,22 @@ SMODS.Joker{ --Three-Leaf Clover
     calculate = function(self, card, context)
         if not context.blueprint and not context.repetition then
             if context.consumeable then
-                if context.consumeable.ability.name == "The Wheel of Fortune" and context.consumeable.sha_wheel_nope then
+                if context.consumeable.ability.name == "The Wheel of Fortune" and not context.consumeable.sha_wheel_yup then
                     card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
+                    print("Nope!")
                     return{
                         extra = {focus = card, message = localize('k_upgrade_ex'), colour = G.C.CHIPS},
                         card = card
                     }
                 end
-            elseif context.cardarea == G.play and context.other_card.ability then
-                if context.other_card.ability.name == 'Lucky Card' then
-                    if not context.other_card.lucky_trigger then
-                        card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
-                        return{
-                            extra = {focus = card, message = localize('k_upgrade_ex'), colour = G.C.CHIPS},
-                            card = card
-                        }
-                    end
+            end
+            if context.cardarea == G.play and context.individual and context.other_card.ability and context.other_card.ability.name == 'Lucky Card' then
+                if not context.other_card.lucky_trigger then
+                    card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
+                    return{
+                        extra = {focus = card, message = localize('k_upgrade_ex'), colour = G.C.CHIPS},
+                        card = card
+                    }
                 end
             end
         end
